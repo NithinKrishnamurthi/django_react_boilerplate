@@ -2,10 +2,12 @@ const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
-  entry: './project/frontend/src/index.js',
+  entry: {
+	home:'./project/frontend/src/index.js'
+  },
   output: {
     path: path.resolve(__dirname, 'project/frontend/static'),
-    filename: 'js/bundle.js'
+    filename: 'js/[name].bundle.js'
   },
   module: {
     rules: [{
